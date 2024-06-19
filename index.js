@@ -13,7 +13,12 @@ const { app, server } = require("./socket/index");
 //     credentials: true,
 //   })
 // );
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookiesParser());
 
